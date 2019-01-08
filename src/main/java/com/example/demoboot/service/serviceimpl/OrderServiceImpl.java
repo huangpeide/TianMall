@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
         //添加到user_order中减少商品相应的数量
         for (GoodsAndNum goodsAndNum : userCartItem) {
             orderMapper.insertIntoUserOrders(goodsAndNum.getItem().getId(), goodsAndNum.getNum(), allorderid);
-            itemMapper.reduceItemStock(goodsAndNum.getNum(), goodsAndNum.getItem().getId());
+//            itemMapper.reduceItemStock(goodsAndNum.getNum(), goodsAndNum.getItem().getId());
         }
 
         //添加到Pay

@@ -49,8 +49,8 @@ public interface ItemMapper {
     @Select("SELECT COUNT(*) FROM `goods` WHERE kind=#{kind}")
     int selectCountByKind(@Param("kind") String kind);
 
-    @Update("UPDATE `goods` SET stock=stock-#{reducenum} WHERE id= #{id}")
-    void reduceItemStock(@Param("reducenum") int reducenum, @Param("id") int id);
+//    @Update("UPDATE `goods` SET stock=stock-#{reducenum} WHERE id= #{id}")
+//    void reduceItemStock(@Param("reducenum") int reducenum, @Param("id") int id);
 
     @Select("SELECT * FROM `goods`")
     List<Item> SelectAllItems();
