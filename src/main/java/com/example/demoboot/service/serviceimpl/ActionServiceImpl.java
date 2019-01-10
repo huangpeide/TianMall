@@ -1,9 +1,11 @@
 package com.example.demoboot.service.serviceimpl;
 
 import com.example.demoboot.bean.GoodsAndNum;
+import com.example.demoboot.bean.Item;
 import com.example.demoboot.bean.ItemIdAndNum;
 import com.example.demoboot.mapper.CartMapper;
 import com.example.demoboot.mapper.ItemMapper;
+import com.example.demoboot.mapper.WishListMapper;
 import com.example.demoboot.service.ActionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,9 @@ public class ActionServiceImpl implements ActionService {
 
     @Autowired
     ItemMapper itemMapper;
+
+    @Autowired
+    WishListMapper wishListMapper;
     private List<GoodsAndNum> goodsAndNums = new ArrayList<>();
 
     @Override
@@ -71,6 +76,21 @@ public class ActionServiceImpl implements ActionService {
             }
         }
         return res;
+    }
+
+    @Override
+    public int addToWishList(int userId, int itemId) {
+        return wishListMapper.addToWishList(userId, itemId);
+    }
+
+    @Override
+    public void removeWishList(int userId, int itemId) {
+        wishListMapper.deleteWishList(userId,itemId);
+    }
+
+    @Override
+    public List<Item> getWishListItem(int userId) {
+        return wishListMapper.getWishListItem(userId);
     }
 
 }

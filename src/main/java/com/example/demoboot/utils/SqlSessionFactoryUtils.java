@@ -8,17 +8,27 @@ import java.io.IOException;
 
 public class SqlSessionFactoryUtils {
     private static SqlSessionFactory sqlSessionFactory;
+    private static SqlSessionFactoryUtils instace;
 
-    static {
-        SqlSessionFactoryBuilder ssfb = new SqlSessionFactoryBuilder();
-        try {
-            sqlSessionFactory = ssfb.build(Resources.getResourceAsStream("testmybatis_config.xml"));
-        } catch (IOException e) {
-            e.printStackTrace();
+    public SqlSessionFactory getSqlSessionFactory() {
+        if (sqlSessionFactory == null) {
+            SqlSessionFactoryBuilder ssfb = new SqlSessionFactoryBuilder();
+            try {
+                sqlSessionFactory = ssfb.build(Resources.getResourceAsStream("testmybatis_config.xml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+        return sqlSessionFactory;
     }
 
-    public static SqlSessionFactory getSqlSessionFactory() {
-        return sqlSessionFactory;
+    public static SqlSessionFactoryUtils getInstace() {
+        if (instace == null) {
+            instace = new SqlSessionFactoryUtils();
+        }
+        return instace;
+    }
+
+    private SqlSessionFactoryUtils() {
     }
 }

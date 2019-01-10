@@ -7,6 +7,15 @@ $(function () {
         return false;
     });
 
+    $('.wishlist').click(function () {
+        var href = $(this).parent().prev().attr('href');
+        var dengyuindex = href.indexOf('=');
+        var id = href.slice(dengyuindex + 1, href.length);
+        addToWishList(id);
+        return false;
+    });
+
+
     $('.single-add-to-cart').click(function () {
         var itemid = parseInt($(this).prev().text());
         var num = parseInt($('.quantity>input').val());
@@ -30,6 +39,7 @@ $(function () {
             success: function (data) {
                 if (data == "true") {
                     refreshcart();
+                    alert("添加成功");
                 } else if (data == "false") {
                     alert("添加失败");
                 } else {
@@ -55,6 +65,7 @@ $(function () {
             success: function (data) {
                 if (data == "true") {
                     refreshcart();
+                    alert("删除成功");
                 } else if (data == "false") {
                     alert("删除失败");
                 } else {
@@ -64,6 +75,25 @@ $(function () {
             }
         });
 
+    }
+    function addToWishList(id) {
+        $.ajax({
+            type: "POST",
+            url: "/tiantian/addToList",
+            dataType: "text",
+            data: "itemid=" + id,
+            success: function (data) {
+                if (data == "true") {
+                    refreshcart();
+                    alert("添加成功")
+                } else if (data == "false") {
+                    alert("添加失败");
+                } else {
+                    alert("请先登录");
+                    window.location.href = '/tiantian/login'
+                }
+            }
+        });
     }
 
     function refreshcart() {
@@ -93,6 +123,5 @@ $(function () {
                 $('.amount').text(total.toFixed(2));
             }
         });
-
     }
 });

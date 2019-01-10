@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80013
 File Encoding         : 65001
 
-Date: 2019-01-08 11:49:44
+Date: 2019-01-10 11:28:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -85,11 +85,12 @@ CREATE TABLE `cart` (
   PRIMARY KEY (`id`),
   KEY `userId` (`userId`),
   KEY `goodsId` (`goodsId`)
-) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cart
 -- ----------------------------
+INSERT INTO `cart` VALUES ('119', '43', '2', '1', null);
 
 -- ----------------------------
 -- Table structure for goods
@@ -758,6 +759,26 @@ INSERT INTO `user_order` VALUES ('4', '344', '4', '20');
 INSERT INTO `user_order` VALUES ('6', '4', '4', '22');
 INSERT INTO `user_order` VALUES ('7', '5', '3', '23');
 INSERT INTO `user_order` VALUES ('9', '1', '4', '24');
+
+-- ----------------------------
+-- Table structure for wishlist
+-- ----------------------------
+DROP TABLE IF EXISTS `wishlist`;
+CREATE TABLE `wishlist` (
+  `wishlistid` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) NOT NULL,
+  `itemId` int(11) NOT NULL,
+  PRIMARY KEY (`wishlistid`),
+  KEY `wishuser` (`userId`),
+  KEY `wishitem` (`itemId`),
+  CONSTRAINT `wishitem` FOREIGN KEY (`itemId`) REFERENCES `goods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `wishuser` FOREIGN KEY (`userId`) REFERENCES `userinfo` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of wishlist
+-- ----------------------------
+INSERT INTO `wishlist` VALUES ('1', '43', '2');
 
 -- ----------------------------
 -- View structure for goodsinfo

@@ -6033,3 +6033,20 @@ table.shop-cart .actions .update-cart {
         -webkit-transform: rotate(-360deg);
     }
 }
+.proceed-to-cart a {
+    width: 100%;
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    height: 48px;
+    line-height: 46px;
+    padding: 0 30px;
+    color: #fff;
+    display: block;
+    margin-left: 0;
+    background-color: #5fbd74;
+    text-align: center;
+    text-transform: uppercase;
+}
+

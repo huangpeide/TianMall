@@ -42,12 +42,12 @@
     <div class="mobile-menu">
         <ul id="mobile-menu" class="menu">
             <li><a href="${pageContext.request.contextPath}/index">主页</a></li>
-            <li><a href="about-us.html">关于我们</a></li>
-            <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">购物</a></li>
+            <li><a href="javascript:void(0)">关于我们</a></li>
+            <li><a href="${pageContext.request.contextPath}/wishList">收藏夹</a></li>
             <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">产品列表</a></li>
             <li><a href="${pageContext.request.contextPath}/cart">购物车</a></li>
             <li><a href="${pageContext.request.contextPath}/checkout">去结算</a></li>
-            <li><a href="contact-us.html">联系我们</a></li>
+            <li><a href="javascript:void(0)">联系我们</a></li>
         </ul>
     </div>
 </div>
@@ -103,12 +103,12 @@
                         <nav class="menu">
                             <ul class="main-menu">
                                 <li><a href="${pageContext.request.contextPath}/index">主页</a></li>
-                                <li><a href="about-us.html">关于我们</a></li>
-                                <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">购物</a></li>
+                                <li><a href="javascript:void(0)">关于我们</a></li>
+                                <li><a href="${pageContext.request.contextPath}/wishList">收藏夹</a></li>
                                 <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">产品列表</a></li>
                                 <li><a href="${pageContext.request.contextPath}/cart">购物车</a></li>
                                 <li><a href="${pageContext.request.contextPath}/checkout">去结算</a></li>
-                                <li><a href="contact-us.html">联系我们</a></li>
+                                <li><a href="javascript:void(0)">联系我们</a></li>
                             </ul>
                         </nav>
                         <div class="btn-wrap">
@@ -124,7 +124,8 @@
                                                     <li>
                                                         <a href="javascript:void(0)" class="remove">×</a>
                                                         <a href="${pageContext.request.contextPath}/item?itemid=${item.item.id}">
-                                                            <img src="http://localhost/img/goodsimg/${item.item.image}" alt=""/>
+                                                            <img src="http://localhost/img/goodsimg/${item.item.image}"
+                                                                 alt=""/>
                                                                 ${item.item.name}
                                                         </a>
                                                         <span class="quantity">${item.num}×${item.item.value}</span>
@@ -290,56 +291,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section-bg-3 pt-6 pb-6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="text-center mb-1 section-pretitle">A friendly</div>
-                        <h2 class="text-center section-title mtn-2">Organic Store</h2>
-                        <div class="organik-seperator mb-9 center">
-                            <span class="sep-holder"><span class="sep-line"></span></span>
-                            <div class="sep-icon"><i class="organik-flower"></i></div>
-                            <span class="sep-holder"><span class="sep-line"></span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="organik-special-title">
-                            <div class="number">01</div>
-                            <div class="title">Always Fresh</div>
-                        </div>
-                        <p>Cur tantas regiones barbarorum peat dibus obiit, tregiones barbarorum peat dibus obiit, tot
-                            mariata</p>
-                        <div class="mb-8"></div>
-                        <div class="organik-special-title">
-                            <div class="number">02</div>
-                            <div class="title">Keep You Healthy</div>
-                        </div>
-                        <p>Cur tantas regiones barbarorum peat dibus obiit, tregiones barbarorum peat dibus obiit, tot
-                            mariata</p>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-8"></div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="organik-special-title align-right">
-                            <div class="number">03</div>
-                            <div class="title">Safe From Pesticides</div>
-                        </div>
-                        <p>Cur tantas regiones barbarorum peat dibus obiit, tregiones barbarorum peat dibus obiit, tot
-                            mariata</p>
-                        <div class="mb-8"></div>
-                        <div class="organik-special-title align-right">
-                            <div class="number">04</div>
-                            <div class="title">Keep You Healthy</div>
-                        </div>
-                        <p>Cur tantas regiones barbarorum peat dibus obiit, tregiones barbarorum peat dibus obiit, tot
-                            mariata</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="section border-bottom mt-6 mb-5">
             <div class="container">
                 <div class="row">
@@ -349,8 +301,8 @@
                                 <i class="organik-delivery"></i>
                             </div>
                             <div class="content">
-                                <div class="title">Free shipping</div>
-                                <div class="text">All order over $100</div>
+                                <div class="title">免费送货</div>
+                                <div class="text">所有订单满66元免运费</div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 organik-process-small-icon-step">
@@ -358,8 +310,8 @@
                                 <i class="organik-hours-support"></i>
                             </div>
                             <div class="content">
-                                <div class="title">Customer support</div>
-                                <div class="text">Support 24/7</div>
+                                <div class="title">服务支持</div>
+                                <div class="text">7*24全天候支持</div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 organik-process-small-icon-step">
@@ -367,8 +319,8 @@
                                 <i class="organik-credit-card"></i>
                             </div>
                             <div class="content">
-                                <div class="title">Secure payments</div>
-                                <div class="text">Confirmed</div>
+                                <div class="title">安全支付</div>
+                                <div class="text">安全有保障</div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 organik-process-small-icon-step">
@@ -376,8 +328,8 @@
                                 <i class="organik-lettuce"></i>
                             </div>
                             <div class="content">
-                                <div class="title">Made with love</div>
-                                <div class="text">Best services</div>
+                                <div class="title">用心制作</div>
+                                <div class="text">最好的服务</div>
                             </div>
                         </div>
                     </div>
@@ -706,155 +658,155 @@
                 </div>
             </div>
         </div>
-        <div class="section pt-12">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="text-center mb-1 section-pretitle">Latest</div>
-                        <h2 class="text-center section-title mtn-2">From our blog</h2>
-                        <div class="organik-seperator center mb-6">
-                            <span class="sep-holder"><span class="sep-line"></span></span>
-                            <div class="sep-icon"><i class="organik-flower"></i></div>
-                            <span class="sep-holder"><span class="sep-line"></span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="blog-grid-item">
-                            <div class="post-thumbnail">
-                                <a href="#">
-                                    <img src="images/blog/blog_1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="entry-meta">
-									<span class="posted-on">
-										<i class="ion-calendar"></i>
-										<span>August 9, 2016</span>
-									</span>
-                                    <span class="comment">
-										<i class="ion-chatbubble-working"></i> 0
-									</span>
-                                </div>
-                                <a href="#">
-                                    <h1 class="entry-title">How to steam &amp; purée your sugar pie pumkin</h1>
-                                </a>
-                                <div class="entry-content">
-                                    Cut the halves into smaller pieces and place in a large pot of water with a steam
-                                    basket to keep the pumpkin pieces from touching…
-                                </div>
-                                <div class="entry-more">
-                                    <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blog-grid-item">
-                            <div class="post-thumbnail">
-                                <a href="#">
-                                    <img src="images/blog/blog_2.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="entry-meta">
-									<span class="posted-on">
-										<i class="ion-calendar"></i>
-										<span>August 9, 2016</span>
-									</span>
-                                    <span class="comment">
-										<i class="ion-chatbubble-working"></i> 0
-									</span>
-                                </div>
-                                <a href="#">
-                                    <h1 class="entry-title">Great bulk recipes to help use all your organic
-                                        vegetables</h1>
-                                </a>
-                                <div class="entry-content">
-                                    A fridge full of organic vegetables purchased or harvested with the best of
-                                    intentions, and then life gets busy, leaving no time to peel,
-                                </div>
-                                <div class="entry-more">
-                                    <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blog-grid-item">
-                            <div class="post-thumbnail">
-                                <a href="#">
-                                    <img src="images/blog/blog_1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <div class="post-content">
-                                <div class="entry-meta">
-									<span class="posted-on">
-										<i class="ion-calendar"></i>
-										<span>August 9, 2016</span>
-									</span>
-                                    <span class="comment">
-										<i class="ion-chatbubble-working"></i> 0
-									</span>
-                                </div>
-                                <a href="#">
-                                    <h1 class="entry-title">How can salmon be raised organically in fish farms?</h1>
-                                </a>
-                                <div class="entry-content">
-                                    Organic food consumption is rapidly increasing. The heightened interest in the
-                                    global environment and a willingness to look
-                                </div>
-                                <div class="entry-more">
-                                    <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <hr class="mt-7 mb-3"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section pt-2 pb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="client-carousel" data-auto-play="true" data-desktop="5" data-laptop="3"
-                             data-tablet="3" data-mobile="2">
-                            <div class="client-item">
-                                <a href="#" target="_blank">
-                                    <img src="images/client/client_1.png" alt=""/>
-                                </a>
-                            </div>
-                            <div class="client-item">
-                                <a href="#" target="_blank">
-                                    <img src="images/client/client_2.png" alt=""/>
-                                </a>
-                            </div>
-                            <div class="client-item">
-                                <a href="#" target="_blank">
-                                    <img src="images/client/client_3.png" alt=""/>
-                                </a>
-                            </div>
-                            <div class="client-item">
-                                <a href="#" target="_blank">
-                                    <img src="images/client/client_4.png" alt=""/>
-                                </a>
-                            </div>
-                            <div class="client-item">
-                                <a href="#" target="_blank">
-                                    <img src="images/client/client_5.png" alt=""/>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <%--<div class="section pt-12">--%>
+            <%--<div class="container">--%>
+                <%--<div class="row">--%>
+                    <%--<div class="col-sm-12">--%>
+                        <%--<div class="text-center mb-1 section-pretitle">Latest</div>--%>
+                        <%--<h2 class="text-center section-title mtn-2">From our blog</h2>--%>
+                        <%--<div class="organik-seperator center mb-6">--%>
+                            <%--<span class="sep-holder"><span class="sep-line"></span></span>--%>
+                            <%--<div class="sep-icon"><i class="organik-flower"></i></div>--%>
+                            <%--<span class="sep-holder"><span class="sep-line"></span></span>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="row">--%>
+                    <%--<div class="col-md-4">--%>
+                        <%--<div class="blog-grid-item">--%>
+                            <%--<div class="post-thumbnail">--%>
+                                <%--<a href="#">--%>
+                                    <%--<img src="images/blog/blog_1.jpg" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="post-content">--%>
+                                <%--<div class="entry-meta">--%>
+									<%--<span class="posted-on">--%>
+										<%--<i class="ion-calendar"></i>--%>
+										<%--<span>August 9, 2016</span>--%>
+									<%--</span>--%>
+                                    <%--<span class="comment">--%>
+										<%--<i class="ion-chatbubble-working"></i> 0--%>
+									<%--</span>--%>
+                                <%--</div>--%>
+                                <%--<a href="#">--%>
+                                    <%--<h1 class="entry-title">How to steam &amp; purée your sugar pie pumkin</h1>--%>
+                                <%--</a>--%>
+                                <%--<div class="entry-content">--%>
+                                    <%--Cut the halves into smaller pieces and place in a large pot of water with a steam--%>
+                                    <%--basket to keep the pumpkin pieces from touching…--%>
+                                <%--</div>--%>
+                                <%--<div class="entry-more">--%>
+                                    <%--<a href="#">Read more</a>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="col-md-4">--%>
+                        <%--<div class="blog-grid-item">--%>
+                            <%--<div class="post-thumbnail">--%>
+                                <%--<a href="#">--%>
+                                    <%--<img src="images/blog/blog_2.jpg" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="post-content">--%>
+                                <%--<div class="entry-meta">--%>
+									<%--<span class="posted-on">--%>
+										<%--<i class="ion-calendar"></i>--%>
+										<%--<span>August 9, 2016</span>--%>
+									<%--</span>--%>
+                                    <%--<span class="comment">--%>
+										<%--<i class="ion-chatbubble-working"></i> 0--%>
+									<%--</span>--%>
+                                <%--</div>--%>
+                                <%--<a href="#">--%>
+                                    <%--<h1 class="entry-title">Great bulk recipes to help use all your organic--%>
+                                        <%--vegetables</h1>--%>
+                                <%--</a>--%>
+                                <%--<div class="entry-content">--%>
+                                    <%--A fridge full of organic vegetables purchased or harvested with the best of--%>
+                                    <%--intentions, and then life gets busy, leaving no time to peel,--%>
+                                <%--</div>--%>
+                                <%--<div class="entry-more">--%>
+                                    <%--<a href="#">Read more</a>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="col-md-4">--%>
+                        <%--<div class="blog-grid-item">--%>
+                            <%--<div class="post-thumbnail">--%>
+                                <%--<a href="#">--%>
+                                    <%--<img src="images/blog/blog_1.jpg" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="post-content">--%>
+                                <%--<div class="entry-meta">--%>
+									<%--<span class="posted-on">--%>
+										<%--<i class="ion-calendar"></i>--%>
+										<%--<span>August 9, 2016</span>--%>
+									<%--</span>--%>
+                                    <%--<span class="comment">--%>
+										<%--<i class="ion-chatbubble-working"></i> 0--%>
+									<%--</span>--%>
+                                <%--</div>--%>
+                                <%--<a href="#">--%>
+                                    <%--<h1 class="entry-title">How can salmon be raised organically in fish farms?</h1>--%>
+                                <%--</a>--%>
+                                <%--<div class="entry-content">--%>
+                                    <%--Organic food consumption is rapidly increasing. The heightened interest in the--%>
+                                    <%--global environment and a willingness to look--%>
+                                <%--</div>--%>
+                                <%--<div class="entry-more">--%>
+                                    <%--<a href="#">Read more</a>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="row">--%>
+                    <%--<div class="col-sm-12">--%>
+                        <%--<hr class="mt-7 mb-3"/>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="section pt-2 pb-4">--%>
+            <%--<div class="container">--%>
+                <%--<div class="row">--%>
+                    <%--<div class="col-sm-12">--%>
+                        <%--<div class="client-carousel" data-auto-play="true" data-desktop="5" data-laptop="3"--%>
+                             <%--data-tablet="3" data-mobile="2">--%>
+                            <%--<div class="client-item">--%>
+                                <%--<a href="#" target="_blank">--%>
+                                    <%--<img src="images/client/client_1.png" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="client-item">--%>
+                                <%--<a href="#" target="_blank">--%>
+                                    <%--<img src="images/client/client_2.png" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="client-item">--%>
+                                <%--<a href="#" target="_blank">--%>
+                                    <%--<img src="images/client/client_3.png" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="client-item">--%>
+                                <%--<a href="#" target="_blank">--%>
+                                    <%--<img src="images/client/client_4.png" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="client-item">--%>
+                                <%--<a href="#" target="_blank">--%>
+                                    <%--<img src="images/client/client_5.png" alt=""/>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
     </div>
     <footer class="footer">
         <div class="container">
@@ -891,10 +843,9 @@
                     <div class="widget">
                         <h3 class="widget-title">Useful Link</h3>
                         <ul>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Our Blog</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">我们的团队</a></li>
+                            <li><a href="#">我们的博客</a></li>
+                            <li><a href="#">关于我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -902,7 +853,7 @@
                     <div class="widget">
                         <h3 class="widget-title">Subscribe</h3>
                         <p>
-                            Enter your email address for our mailing list to keep yourself updated.
+                            输入您的邮箱，我们有更新信息会第一时间通知您
                         </p>
                         <form class="newsletter">
                             <input type="email" name="EMAIL" placeholder="Your email address" required=""/>

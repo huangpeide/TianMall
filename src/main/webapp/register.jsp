@@ -43,12 +43,12 @@
     <div class="mobile-menu">
         <ul id="mobile-menu" class="menu">
             <li><a href="${pageContext.request.contextPath}/index">主页</a></li>
-            <li><a href="about-us.html">关于我们</a></li>
-            <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">购物</a></li>
+            <li><a href="javascript:void(0)">关于我们</a></li>
+            <li><a href="${pageContext.request.contextPath}/wishList">收藏夹</a></li>
             <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">产品列表</a></li>
             <li><a href="${pageContext.request.contextPath}/cart">购物车</a></li>
-            <li><a href="checkout.html">去结算</a></li>
-            <li><a href="contact-us.html">联系我们</a></li>
+            <li><a href="${pageContext.request.contextPath}/checkout">去结算</a></li>
+            <li><a href="javascript:void(0)">联系我们</a></li>
         </ul>
     </div>
 </div>
@@ -97,12 +97,12 @@
                         <nav class="menu">
                             <ul class="main-menu">
                                 <li><a href="${pageContext.request.contextPath}/index">主页</a></li>
-                                <li><a href="about-us.html">关于我们</a></li>
-                                <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">购物</a></li>
+                                <li><a href="javascript:void(0)">关于我们</a></li>
+                                <li><a href="${pageContext.request.contextPath}/wishList">收藏夹</a></li>
                                 <li><a href="${pageContext.request.contextPath}/itemList?kind=FRU">产品列表</a></li>
                                 <li><a href="${pageContext.request.contextPath}/cart">购物车</a></li>
                                 <li><a href="${pageContext.request.contextPath}/checkout">去结算</a></li>
-                                <li><a href="contact-us.html">联系我们</a></li>
+                                <li><a href="javascript:void(0)">联系我们</a></li>
                             </ul>
                         </nav>
                         <div class="btn-wrap">
@@ -271,10 +271,9 @@
                     <div class="widget">
                         <h3 class="widget-title">Useful Link</h3>
                         <ul>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Our Blog</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">我们的团队</a></li>
+                            <li><a href="#">我们的博客</a></li>
+                            <li><a href="#">关于我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -282,7 +281,7 @@
                     <div class="widget">
                         <h3 class="widget-title">Subscribe</h3>
                         <p>
-                            Enter your email address for our mailing list to keep yourself updated.
+                            输入您的邮箱，我们有更新信息会第一时间通知您
                         </p>
                         <form class="newsletter">
                             <input type="email" name="EMAIL" placeholder="Your email address" required=""/>

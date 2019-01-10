@@ -5,12 +5,10 @@
         $(".noo-spinner").remove();
     });
 
-    /* On resize */
     $(window).on('resize', function () {
         cartTopDistance();
     });
 
-    /* On scroll */
     $(window).on('scroll', function () {
         cartTopDistance();
 
@@ -45,7 +43,6 @@
     });
 
     $(document).ready(function ($) {
-        /* Search */
         var topSearch = $('.top-search');
         $('.top-search-btn').on('click', function () {
             if (!topSearch.hasClass('open')) {
@@ -66,7 +63,7 @@
             }
         });
 
-        /* Mini cart */
+
         cartTopDistance();
         var miniCart = $('.mini-cart-wrap');
         miniCart.on('click', function (e) {
@@ -81,20 +78,17 @@
             }
         });
 
-        /* about background */
         var organikAbout = $('.organik-about');
         organikAbout.each(function () {
             $(this).find('.image').css('background-color', $(this).find('.image').attr('data-bg-color'));
         });
 
-        /* featured products */
         var featuredProducts = $('.organik-featured-product');
         featuredProducts.each(function () {
             if ($(this).attr("data-bg-image")) $(this).css('background-image', 'url("' + $(this).attr("data-bg-image") + '")');
             if ($(this).attr("data-bg-color")) $(this).css('background-color', $(this).attr('data-bg-color'));
         });
 
-        /* product category */
         var productCategory = $('.organik-featured-category');
         productCategory.each(function () {
             if ($(this).find('.bg').attr("data-bg-color")) $(this).find('.bg').css('background-color', $(this).find('.bg').attr('data-bg-color'));
@@ -105,10 +99,10 @@
             if ($(this).find('.cats-wrap').attr("data-bg-color")) $(this).find('.cats-wrap').css('background-color', $(this).find('.cats-wrap').attr('data-bg-color'));
         });
 
-        /* tooltip */
+
         $('[data-toggle="tooltip"]').tooltip();
 
-        /* accordion */
+
         var accordionHeading = $('.accordion-heading');
         accordionHeading.on('click', function () {
             $(this).toggleClass("active");
@@ -191,17 +185,12 @@
 
 })(window, document, jQuery);
 
-/*=================================================================
-	cart top distance
-===================================================================*/
+
 function cartTopDistance() {
     var headerHeight = $('.header').height();
     $('.widget-shopping-cart-content').css('top', headerHeight + 'px');
 }
 
-/*=================================================================
-	countdown function
-===================================================================*/
 function Countdown() {
     if ($(".pl-clock").length > 0) {
         $(".pl-clock").each(function () {
@@ -213,9 +202,6 @@ function Countdown() {
     }
 }
 
-/*=================================================================
-	google map
-===================================================================*/
 function googleMap() {
     if ($("#googleMap").length > 0) {
         $obj = $("#googleMap");
@@ -243,9 +229,6 @@ function googleMap() {
     }
 }
 
-/*=================================================================
-	owl carousel slider function
-===================================================================*/
 function owlCarousel() {
     if ($(".product-slider").length > 0) {
         $(".product-slider").each(function () {
